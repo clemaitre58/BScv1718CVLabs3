@@ -1,0 +1,73 @@
+\documentclass[12pt]{tdtp}
+\usepackage{hyperref}
+\usepackage{tabularx,colortbl}
+\usepackage{multirow}
+\usepackage{listings}
+\lstset{
+	language=VHDL,
+basicstyle=\tiny\ttfamily}
+\definecolor{light-gray}{gray}{0.96}
+\definecolor{pageheading-gray}{gray}{0.2}
+\definecolor{dark-gray}{gray}{0.45}
+\definecolor{dark-green}{rgb}{0.245,0.121,0.0}
+
+\newcommand{\auteur}{Cedric Lemaitre}
+\newcommand{\couriel}{c.lemaitre58@gmail.com}
+\newcommand{\promo}{BScv}
+\newcommand{\annee}{2017-2018}
+\newcommand{\matiere}{Computer science}
+
+\newcommand{\tdtp}{Lab \#3}
+\renewcommand{\sujet}{Function, array, matrix}
+
+
+\begin{document}
+\titre
+\textit{NB : use good practice for naming and write code \footnote{\url{https://google.github.io/styleguide/cppguide.html}}!!!}
+
+%%%%%%%%%%%
+\Exo
+
+Download data from this place : \url{https://raw.githubusercontent.com/mwaskom/seaborn-data/master/titanic.csv}
+as *.csv file.
+
+Create an object which allow to stock the allowing attributes :
+\begin{itemize}
+	\item survived
+	\item pclass
+	\item sex
+	\item age
+	\item sibsp
+	\item parch
+	\item fare
+	\item embarked
+	\item class
+	\item who
+	\item adult\_male
+	\item deck
+	\item embark\_town
+	\item alive
+	\item alone
+\end{itemize}
+
+Choose the great type for each attribute considering data in csv file.
+
+In your main file, create a std::vector of your object, which object should contain a line of the file.
+Use string, ifstream object in order to manipulate data in the file.
+Be carefull when data is missing, you have to add default or special values.
+
+
+\Exo
+
+Create an object which allows to process the data store in your previous vector of object.
+Add to this class, the following functions :
+
+\begin{itemize}
+	\item mean age value
+	\item number alive
+	\item histogram of embarked town
+\end{itemize}
+
+Test all this function in your main function.
+
+\end{document}
